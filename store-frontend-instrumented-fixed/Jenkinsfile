@@ -11,7 +11,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'cd store-frontend-instrumented-fixed/'
-        sh 'docker build -f "Dockerfile" -t andriyskyy/storedog:latest .'
+        sh 'docker build -f "Dockerfile" -t andriyskyy/storedog:latest'
       }
     }
     //Pushing images to public repository
