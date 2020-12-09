@@ -10,7 +10,7 @@ pipeline {
     //Building Images from Dockerfile
     stage('Build') {
       steps {
-        sh 'cd /store-frontend-instrumented-fixed/'
+        sh 'cd ../store-frontend-instrumented-fixed/'
         sh 'docker build -f "Dockerfile" -t andriyskyy/storedog:latest .'
       }
     }
