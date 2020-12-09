@@ -14,7 +14,7 @@ WORKDIR /spree
 #COPY ./store-frontend /spree/store-frontend
 RUN chgrp -R 0 /spree && \
     chmod -R g=u /spree
-RUN cd store-frontend && \
+RUN cd store-frontend-instrumented-fixed/store-frontend && \
       bundle install && \
       yarn install
 CMD ["sh", "docker-entrypoint.sh"]
